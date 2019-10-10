@@ -1,0 +1,97 @@
+#include <iostream>
+
+using namespace std;
+void llenar(int m[][5],int n);
+void mostrar(int m[][5],int n);
+void llenarImv(int m[][5],int n);
+void mostrarDP(int m[][5],int n);
+void mostrarDS(int m[][5],int n);
+void mostrarAR_CO(int m[][5],int n);
+int main()
+{
+    int m[5][5];
+    llenar(m,5);
+    mostrar(m,5);
+    llenarImv(m,5);
+    mostrar(m,5);
+    mostrarDP(m,5);
+    mostrarDS(m,5);
+    mostrarAR_CO(m,5);
+
+    return 0;
+}
+void llenar(int m[][5],int n)
+{
+    int ll=1;
+    for(int i=0;i<5;i++)
+    {
+        for(int j=0;j<5;j++)
+        {
+            m[j][i]=ll++;
+        }
+    }
+    
+}
+void mostrar(int m[][5],int n)
+{
+    
+    for(int i=0;i<5;i++)
+    {
+        cout<<endl;
+        for(int j=0;j<5;j++)
+        {
+            cout<<m[i][j];
+            cout<<"  ";
+        }
+    }
+    cout<<endl;
+}
+void llenarImv(int m[][5],int n)
+{
+    int ll=1;
+    for(int i=4;i>=0;i--)
+    {
+        for(int j=4;j>=0;j--)
+        {
+            m[j][i]=ll++;
+        }
+    }
+    
+}
+void mostrarDP(int m[][5],int n)
+{
+    cout<<endl;
+    for(int i=0,j=0;i<5;i++,j++)
+    {
+        cout<<m[i][j];
+        cout<<"  ";
+        
+    }
+    
+}
+void mostrarDS(int m[][5],int n)
+{
+    cout<<endl;
+    for(int i=4,j=0;i>=0;i--,j++)
+    {
+        cout<<m[i][j];
+        cout<<"  ";
+        
+    }
+    
+    
+}
+void mostrarAR_CO(int m[][5],int n)
+{
+    cout<<endl;
+    for(int i=0;i<n-1;i++)
+    {
+        cout<<endl;
+        for(int j=i+1;j<n;j++)
+        {
+            cout<<m[i][j];
+            cout<<"  ";
+        }
+    }
+    cout<<endl;
+}
