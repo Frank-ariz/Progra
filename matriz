@@ -6,7 +6,10 @@ void mostrar(int m[][5],int n);
 void llenarImv(int m[][5],int n);
 void mostrarDP(int m[][5],int n);
 void mostrarDS(int m[][5],int n);
-void mostrarAR_CO(int m[][5],int n);
+void mostrarAR_DI(int m[][5],int n);
+void mostrarAB_DI(int m[][5],int n);
+void mostrarAR_DIs(int m[][5],int n);
+void mostrarAB_DIs(int m[][5],int n);
 int main()
 {
     int m[5][5];
@@ -16,7 +19,10 @@ int main()
     mostrar(m,5);
     mostrarDP(m,5);
     mostrarDS(m,5);
-    mostrarAR_CO(m,5);
+    mostrarAR_DI(m,5);
+    mostrarAB_DI(m,5);
+    mostrarAR_DIs(m,5);
+    mostrarAB_DIs(m,5);
 
     return 0;
 }
@@ -65,7 +71,6 @@ void mostrarDP(int m[][5],int n)
     {
         cout<<m[i][j];
         cout<<"  ";
-        
     }
     
 }
@@ -81,7 +86,7 @@ void mostrarDS(int m[][5],int n)
     
     
 }
-void mostrarAR_CO(int m[][5],int n)
+void mostrarAR_DI(int m[][5],int n)
 {
     cout<<endl;
     for(int i=0;i<n-1;i++)
@@ -91,6 +96,49 @@ void mostrarAR_CO(int m[][5],int n)
         {
             cout<<m[i][j];
             cout<<"  ";
+        }
+    }
+    cout<<endl;
+}
+void mostrarAB_DI(int m[][5],int n)
+{
+    cout<<endl;
+    for(int r=1;r<n;r++)
+    {
+        cout<<endl;
+        for(int c=0;c<r;c++)
+        {
+            cout<<m[r][c];
+            cout<<"  ";
+        }
+    }
+    cout<<endl;
+}
+void mostrarAR_DIs(int m[][5],int n)
+{
+    cout<<endl;
+    for(int r=0;r<n;r++)
+    {
+        cout<<endl;
+        for(int c=0;c<n-(r+1);c++)
+        {
+            cout<<m[r][c];
+            cout<<" ";
+        }
+    }
+    cout<<endl;
+    
+}
+void mostrarAB_DIs(int m[][5],int n)
+{
+    cout<<endl;
+    for(int r=1;r<n;r++)
+    {
+        cout<<endl;
+        for(int c=n-r;c<n;c++)
+        {
+            cout<<m[r][c];
+            cout<<" ";
         }
     }
     cout<<endl;
