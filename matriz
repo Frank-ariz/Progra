@@ -10,6 +10,8 @@ void mostrarAR_DI(int m[][5],int n);
 void mostrarAB_DI(int m[][5],int n);
 void mostrarAR_DIs(int m[][5],int n);
 void mostrarAB_DIs(int m[][5],int n);
+void girar(int m[][5],int n);
+void girar2(int m[][5],int n);
 int main()
 {
     int m[5][5];
@@ -23,6 +25,10 @@ int main()
     mostrarAB_DI(m,5);
     mostrarAR_DIs(m,5);
     mostrarAB_DIs(m,5);
+    girar(m,5);
+    mostrar(m,5);
+    girar2(m,5);
+    mostrar(m,5)
 
     return 0;
 }
@@ -142,4 +148,29 @@ void mostrarAB_DIs(int m[][5],int n)
         }
     }
     cout<<endl;
+}
+void girar(int m[][5],int n)
+{
+    int aux=0;
+    for(int r=1;r<n;r++)
+    {
+        for(int c=0;c<r;c++)
+        {
+            aux=m[r][c];
+            m[r][c]=m[c][r];
+            m[c][r]=aux;
+        }
+    }
+}
+void girar2(int m[][5],int n)
+{
+    int aux=0;
+    for(int r=n-1;r>0;r--)
+    {
+        for(int c=n-r;c<n;c++)
+        {
+            aux=m[r][c];
+            m[r][c]=
+        }
+    }
 }
